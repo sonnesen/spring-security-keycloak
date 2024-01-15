@@ -1,0 +1,21 @@
+server:
+  port: 9090
+  
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-security-keycloak
+            client-secret: Ukc0DaE1RYiTSFTxj24zyKu04Hw7VGpQ
+            scope:
+              - openid
+              - email
+              - profile
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/sonnesen
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/sonnesen
